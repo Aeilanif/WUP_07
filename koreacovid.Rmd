@@ -24,26 +24,33 @@ mutate(across(where(is.character), as.factor))
 Some of the data was uncoded for sex - sex must be just male or female
 77 of the data entries were coded sex  as blank, so we omit these.
 state of a patient must be died or alive - we adjust that as well   
+ 
+## Methods
   
+  We will analyze the Sex of the patient and the result  if they are alive or dead. I will use the variables in any collection of cat~cat.
+
 # Your Question - Is dying independent of sex?
 
-
-
-
-
-
 ## Graphical results - use ggplot commands to do this  
+```{r}
+dd2 <- kRdata %>% group_by(result,Sex) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
 
 
+# the group_by followed by summarize(count=n())
 
-  
+basicC <- ggplot(dd2,aes(x=result,y=count,fill=Sex))
+basicC + geom_bar(stat="identity",position="dodge")
 
+#Now for percentage plot
 
+basicCC <- ggplot(dd2,aes(x=result,y=prcnt*100,fill=Sex)) 
+basicCC + geom_bar(stat="identity", position = "dodge")
+```
 
+  The data in this plot shows us the results of the people that are alive and dead. We can see that Twice as many men died than women.The disease is killing more men than women according to the data from Korea.
 
-
-  
 ## Numerical results
+
 
 
 ## Inferential results 
