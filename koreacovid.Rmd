@@ -59,9 +59,13 @@ colPerc(table1)
 This shows us all of the people that are still alive, 56 are females and 36 are males. The number of dead people were 44 females and 64 males. The percentage was 98.7% of females remained alive and only 1.4% females died and 97% of males remained alive while 3% are dead. 
 
 ## Inferential results 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
 
-
-
+The test and the fisher test highlights the disparity between the sexes of male and female in regards to being alive or dead. The p-value of 0.0009 confirms that there is a significant difference in the data with males about 2 times more likely than females to die from covid at least in the case of Korea.
 
 ## Conclusions
 
