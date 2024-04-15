@@ -47,11 +47,16 @@ basicCC <- ggplot(dd2,aes(x=result,y=prcnt*100,fill=Sex))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
-  The data in this plot shows us the results of the people that are alive and dead. We can see that Twice as many men died than women.The disease is killing more men than women according to the data from Korea.
+  The data in this plot shows us the results of the people that are alive and dead. We can see that Twice as many males died than females.The disease is killing more males than females according to the data from Korea.
 
 ## Numerical results
+```{r}
+table1 <- xtabs(~result + Sex, data=kRdata)
+rowPerc(table1)
+colPerc(table1)
+```
 
-
+This shows us all of the people that are still alive, 56 are females and 36 are males. The number of dead people were 44 females and 64 males. The percentage was 98.7% of females remained alive and only 1.4% females died and 97% of males remained alive while 3% are dead. 
 
 ## Inferential results 
 
