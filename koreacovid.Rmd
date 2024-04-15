@@ -69,3 +69,4 @@ The test and the fisher test highlights the disparity between the sexes of male 
 
 ## Conclusions
 
+In summary, Our proportion-based bar charts shows a variation in proportion among those who died favoring men, and this furthered by our numerical results which provided the exact percentage to fortify that claim. Finally our inferential results provided the exact counts of the prior tests, but also yielded a low p-value, helping to certify that our results had not purely occurred through by chance. Our odds ratio 2.3 was the single most compelling piece of data generated, helping to reinforce the alternative hypothesis that dying is actually dependent at least in part on sex.  
